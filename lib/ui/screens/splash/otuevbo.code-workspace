@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "../../../.."
+    },
+    {
+      "path": "../../../../../../BACKEND PROGRAMMING/Otuevbo"
+    },
+    {
+      "path": "../../../../../customer"
+    },
+    {
+      "path": "../../../../../../WEB PROGRAMMING/voting-app"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "otuevbo"
+  }
+}
