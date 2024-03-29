@@ -1,5 +1,5 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
+import 'package:fidemlt/ui/widget/bottomnav.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -11,6 +11,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        body: Stack(
+      children: [
+        bottomNavBar(context, position: 0),
+      ],
+    ));
   }
 }

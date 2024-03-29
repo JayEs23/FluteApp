@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-Widget backNavigation(BuildContext context) {
+Widget backNavigation(BuildContext context,
+    {Color color = const Color(0xFFF4EEEE)}) {
   return GestureDetector(
     onTap: () {
       Navigator.pop(context);
@@ -11,7 +12,7 @@ Widget backNavigation(BuildContext context) {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             border: Border.all(width: 1, color: const Color(0xFFF4EEEE)),
-            color: const Color(0xFFF4EEEE)),
+            color: color),
         child: Image.asset('public/images/back.png')),
   );
 }
