@@ -26,6 +26,26 @@ import 'package:fidemlt/ui/screens/auth/signup/setpassword/enterpasswordsetagain
 
 ////home///
 import 'package:fidemlt/ui/screens/home/index.dart';
+import 'package:fidemlt/ui/screens/home/notification.dart';
+
+//new transaction//
+//buyer
+import 'package:fidemlt/ui/screens/home/newFidemltTransaction/buyer/index.dart';
+import 'package:fidemlt/ui/screens/home/newFidemltTransaction/buyer/editdetails.dart';
+import 'package:fidemlt/ui/screens/home/newFidemltTransaction/buyer/payment/index.dart';
+
+////transaction////
+import 'package:fidemlt/ui/screens/transaction/index.dart';
+import 'package:fidemlt/ui/screens/transaction/alltransaction.dart';
+import 'package:fidemlt/ui/screens/transaction/pendingorder/index.dart';
+import 'package:fidemlt/ui/screens/transaction/pendingorder/details.dart';
+import 'package:fidemlt/ui/screens/transaction/pendingtransaction/index.dart';
+import 'package:fidemlt/ui/screens/transaction/completedtransaction/index.dart';
+import 'package:fidemlt/ui/screens/transaction/refundedtransaction/index.dart';
+
+//wallet
+import 'package:fidemlt/ui/screens/wallet/index.dart';
+import 'package:fidemlt/ui/screens/wallet/withdraw.dart';
 
 //profile//
 import 'package:fidemlt/ui/screens/profile/index.dart';
@@ -46,10 +66,11 @@ final GoRouter gorouter = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        // return const Splash();
+        return const Splash();
 
         // return const Home();
-        return const Profile();
+        // return const TransactionHomeScreen();
+        // return const Profile();
         // return const ManageBankAccount();
       },
       routes: <RouteBase>[
@@ -69,6 +90,84 @@ final GoRouter gorouter = GoRouter(
           path: 'home',
           builder: (BuildContext context, GoRouterState state) {
             return const Home();
+          },
+        ),
+        GoRoute(
+          path: 'buyernewtransaction',
+          builder: (BuildContext context, GoRouterState state) {
+            return const BuyerNewTransaction();
+          },
+        ),
+        GoRoute(
+          path: 'buyereditransaction',
+          builder: (BuildContext context, GoRouterState state) {
+            return const BuyerEditTransaction();
+          },
+        ),
+        GoRoute(
+          path: 'buyerpaymenttransaction',
+          builder: (BuildContext context, GoRouterState state) {
+            return const BuyerPaymentTransaction();
+          },
+        ),
+        GoRoute(
+          path: 'notification',
+          builder: (BuildContext context, GoRouterState state) {
+            return const NotificationScreen();
+          },
+        ),
+        GoRoute(
+          path: 'transaction',
+          builder: (BuildContext context, GoRouterState state) {
+            return const TransactionHomeScreen();
+          },
+        ),
+        GoRoute(
+          path: 'alltransactions',
+          builder: (BuildContext context, GoRouterState state) {
+            return const AllTransaction();
+          },
+        ),
+        GoRoute(
+          path: 'pendingorder',
+          builder: (BuildContext context, GoRouterState state) {
+            return const PendingOrder();
+          },
+        ),
+        GoRoute(
+          path: 'pendingorderdetail',
+          builder: (BuildContext context, GoRouterState state) {
+            return const PendingOrderDetails();
+          },
+        ),
+        GoRoute(
+          path: 'pendingtransaction',
+          builder: (BuildContext context, GoRouterState state) {
+            return const PendingTransaction();
+          },
+        ),
+        GoRoute(
+          path: 'completedtransaction',
+          builder: (BuildContext context, GoRouterState state) {
+            return const CompletedTransaction();
+          },
+        ),
+        GoRoute(
+          path: 'refundedtransaction',
+          builder: (BuildContext context, GoRouterState state) {
+            return const RefundedTransaction();
+          },
+        ),
+        GoRoute(
+          path: 'wallet',
+          builder: (BuildContext context, GoRouterState state) {
+            return const WalletScreen();
+          },
+        ),
+        GoRoute(
+          path: 'withdraw',
+          builder: (BuildContext context, GoRouterState state) {
+            return const WithDrawScreen();
           },
         ),
         GoRoute(

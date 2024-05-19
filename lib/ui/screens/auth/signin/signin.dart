@@ -26,7 +26,6 @@ class _SignInState extends State<SignIn> {
     double height = MediaQuery.of(context).size.height;
 
     bool validateForm() {
-      print(_formkey.currentState!.validate());
       return _formkey.currentState!.validate();
     }
 
@@ -153,17 +152,6 @@ class _SignInState extends State<SignIn> {
                                                     width: 3.0))),
                                         autovalidateMode:
                                             AutovalidateMode.onUserInteraction,
-                                        // validator: (text) {
-                                        //   if (text == null || text.isEmpty) {
-                                        //     return 'First name can\'t be empty';
-                                        //   }
-                                        //   if (text.length < 2) {
-                                        //     return "Please enter a valid first name";
-                                        //   }
-                                        //   if (text.length > 49) {
-                                        //     return 'Name can\t be more than 50';
-                                        //   }
-                                        // },
                                         onChanged: (value) {
                                           final boolvalue = validateForm();
                                           setState(() {
