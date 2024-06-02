@@ -48,6 +48,7 @@ import 'package:fidemlt/ui/screens/wallet/index.dart';
 import 'package:fidemlt/ui/screens/wallet/withdraw/index.dart';
 import 'package:fidemlt/ui/screens/wallet/withdraw/choosebankaccount/index.dart';
 import 'package:fidemlt/ui/screens/wallet/withdraw/addbankaccount/index.dart';
+import 'package:fidemlt/ui/screens/wallet/withdraw/addbankaccount/confirmaction/index.dart';
 
 import 'package:fidemlt/ui/screens/wallet/fundwallet/index.dart';
 import 'package:fidemlt/ui/screens/wallet/fundwallet/addcard/index.dart';
@@ -191,6 +192,12 @@ final GoRouter gorouter = GoRouter(
           path: 'wallet/addbank',
           builder: (BuildContext context, GoRouterState state) {
             return const WalletAddBank();
+          },
+        ),
+        GoRoute(
+          path: 'wallet/addbank/confirm',
+          builder: (BuildContext context, GoRouterState state) {
+            return const WalletAddBankConfirmAction();
           },
         ),
 

@@ -1,11 +1,13 @@
 {
-	"folders": [
-		{
-			"path": "../../.."
-		},
-		{
-			"path": "../../../../otuevbo"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "../../.."
+    },
+    {
+      "path": "../../../../otuevbo"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "fidemlt"
+  }
 }
