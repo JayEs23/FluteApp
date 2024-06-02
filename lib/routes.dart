@@ -45,7 +45,12 @@ import 'package:fidemlt/ui/screens/transaction/refundedtransaction/index.dart';
 
 //wallet
 import 'package:fidemlt/ui/screens/wallet/index.dart';
-import 'package:fidemlt/ui/screens/wallet/withdraw.dart';
+import 'package:fidemlt/ui/screens/wallet/withdraw/index.dart';
+import 'package:fidemlt/ui/screens/wallet/withdraw/choosebankaccount/index.dart';
+import 'package:fidemlt/ui/screens/wallet/withdraw/addbankaccount/index.dart';
+
+import 'package:fidemlt/ui/screens/wallet/fundwallet/index.dart';
+import 'package:fidemlt/ui/screens/wallet/fundwallet/addcard/index.dart';
 
 //profile//
 import 'package:fidemlt/ui/screens/profile/index.dart';
@@ -66,9 +71,9 @@ final GoRouter gorouter = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const Splash();
+        // return const Splash();
 
-        // return const Home();
+        return const Home();
         // return const TransactionHomeScreen();
         // return const Profile();
         // return const ManageBankAccount();
@@ -116,6 +121,8 @@ final GoRouter gorouter = GoRouter(
             return const NotificationScreen();
           },
         ),
+
+        //TRANSACTION
         GoRoute(
           path: 'transaction',
           builder: (BuildContext context, GoRouterState state) {
@@ -158,18 +165,50 @@ final GoRouter gorouter = GoRouter(
             return const RefundedTransaction();
           },
         ),
+
+        //WALLET
         GoRoute(
           path: 'wallet',
           builder: (BuildContext context, GoRouterState state) {
             return const WalletScreen();
           },
         ),
+
         GoRoute(
           path: 'withdraw',
           builder: (BuildContext context, GoRouterState state) {
             return const WithDrawScreen();
           },
         ),
+
+        GoRoute(
+          path: 'choosebankaccount',
+          builder: (BuildContext context, GoRouterState state) {
+            return const ChooseBankAccount();
+          },
+        ),
+        GoRoute(
+          path: 'wallet/addbank',
+          builder: (BuildContext context, GoRouterState state) {
+            return const WalletAddBank();
+          },
+        ),
+
+        GoRoute(
+          path: 'fundwallet',
+          builder: (BuildContext context, GoRouterState state) {
+            return const FundWalletScreen();
+          },
+        ),
+
+        GoRoute(
+          path: 'addcard',
+          builder: (BuildContext context, GoRouterState state) {
+            return const AddCardScreen();
+          },
+        ),
+
+        //PROFILE
         GoRoute(
           path: 'profile',
           builder: (BuildContext context, GoRouterState state) {

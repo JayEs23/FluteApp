@@ -214,7 +214,9 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            context.push("/fundwallet");
+                          },
                           child: Container(
                               width: width * 0.45,
                               decoration: BoxDecoration(

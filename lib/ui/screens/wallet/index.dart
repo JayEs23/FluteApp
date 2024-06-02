@@ -116,7 +116,9 @@ class _WalletScreenState extends State<WalletScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          context.push("/fundwallet");
+                        },
                         child: Container(
                             width: screenWidth * 0.42,
                             decoration: BoxDecoration(

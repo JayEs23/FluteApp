@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fidemlt/ui/theme/colors.dart';
+import "package:go_router/go_router.dart";
 
 class WithDrawScreen extends StatefulWidget {
   const WithDrawScreen({super.key});
@@ -44,22 +45,14 @@ class _WithDrawScreenState extends State<WithDrawScreen> {
                     Align(
                         alignment: Alignment.topRight,
                         child: GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(12),
-                            decoration: const BoxDecoration(
-                                color: Color(0XFFECECEC),
-                                shape: BoxShape.circle),
-                            child: const Text(
-                              "X",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ),
-                        )),
+                            onTap: () {
+                              context.pop();
+                            },
+                            child: Align(
+                              alignment: Alignment.topRight,
+                              child: Image.asset(
+                                  "public/images/cancel button.png"),
+                            ))),
                     const Text("Withdraw cash",
                         style: TextStyle(
                             fontFamily: "Work Sans",
@@ -88,7 +81,6 @@ class _WithDrawScreenState extends State<WithDrawScreen> {
                               keyboardType: TextInputType.number,
                               controller: _nameController,
                               decoration: InputDecoration(
-                                  // border: InputBorder.none,
                                   fillColor: Colors.white,
                                   filled: true,
                                   enabledBorder: OutlineInputBorder(
@@ -104,17 +96,6 @@ class _WithDrawScreenState extends State<WithDrawScreen> {
                                           color: Colors.white, width: 3.0))),
                               autovalidateMode:
                                   AutovalidateMode.onUserInteraction,
-                              // validator: (text) {
-                              //   if (text == null || text.isEmpty) {
-                              //     return 'First name can\'t be empty';
-                              //   }
-                              //   if (text.length < 2) {
-                              //     return "Please enter a valid first name";
-                              //   }
-                              //   if (text.length > 49) {
-                              //     return 'Name can\t be more than 50';
-                              //   }
-                              // },
                               onChanged: (value) {
                                 final boolvalue = validateForm();
                                 setState(() {
@@ -130,7 +111,21 @@ class _WithDrawScreenState extends State<WithDrawScreen> {
                             color: Color(0XFF717171),
                             fontFamily: "Work Sans",
                             fontWeight: FontWeight.w400,
-                            fontSize: 14))
+                            fontSize: 14)),
+                    const SizedBox(height: 10),
+                    GestureDetector(
+                        onTap: () {
+                          context.push("/choosebankaccount");
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 12),
+                          decoration: BoxDecoration(
+                              color: const Color(0XFF7F2EEF),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: const Text("Bank Account",
+                              style: TextStyle(color: Colors.white)),
+                        ))
                   ],
                 ),
               ),
