@@ -39,7 +39,17 @@ import 'package:fidemlt/ui/screens/transaction/index.dart';
 import 'package:fidemlt/ui/screens/transaction/alltransaction.dart';
 import 'package:fidemlt/ui/screens/transaction/pendingorder/index.dart';
 import 'package:fidemlt/ui/screens/transaction/pendingorder/details.dart';
+
 import 'package:fidemlt/ui/screens/transaction/pendingtransaction/index.dart';
+
+//pending buyer transaction
+import 'package:fidemlt/ui/screens/transaction/pendingtransaction/buyertransaction/validatepackage/index.dart';
+import 'package:fidemlt/ui/screens/transaction/pendingtransaction/buyertransaction/missingpackage/index.dart';
+
+//pending seller transaction
+import 'package:fidemlt/ui/screens/transaction/pendingtransaction/sellertransaction/uploaddeliverydetails/index.dart';
+import 'package:fidemlt/ui/screens/transaction/pendingtransaction/sellertransaction/canceltransaction/index.dart';
+
 import 'package:fidemlt/ui/screens/transaction/completedtransaction/index.dart';
 import 'package:fidemlt/ui/screens/transaction/refundedtransaction/index.dart';
 
@@ -152,6 +162,33 @@ final GoRouter gorouter = GoRouter(
           path: 'pendingtransaction',
           builder: (BuildContext context, GoRouterState state) {
             return const PendingTransaction();
+          },
+        ),
+
+        GoRoute(
+          path: 'pendingbuyertransactionvalidatepackage',
+          builder: (BuildContext context, GoRouterState state) {
+            return const PendingBuyerTransactionValidatePackage();
+          },
+        ),
+        GoRoute(
+          path: 'pendingbuyertransactionmissingpackage',
+          builder: (BuildContext context, GoRouterState state) {
+            return const PendingBuyerTransactionMissingPackage();
+          },
+        ),
+
+        GoRoute(
+          path: 'pendingsellertransactionuploaddeliverystatus',
+          builder: (BuildContext context, GoRouterState state) {
+            return const PendingSellerTransactionUploadDeliveryDetails();
+          },
+        ),
+
+        GoRoute(
+          path: 'pendingsellertransactioncancelled',
+          builder: (BuildContext context, GoRouterState state) {
+            return const PendingSellerTransactionCancelled();
           },
         ),
         GoRoute(

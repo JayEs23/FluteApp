@@ -35,12 +35,12 @@ class _PendingTransactionState extends State<PendingTransaction> {
             !isEmpty
                 ? Column(
                     children: [
-                      transactHistory(),
-                      transactHistory(),
-                      transactHistory(),
-                      transactHistory(),
-                      transactHistory(),
-                      transactHistory(),
+                      TransactHistory(buyerSellerTransaction: "seller"),
+                      TransactHistory(buyerSellerTransaction: "buyer"),
+                      TransactHistory(buyerSellerTransaction: "seller"),
+                      TransactHistory(buyerSellerTransaction: "buyer"),
+                      TransactHistory(buyerSellerTransaction: "seller"),
+                      TransactHistory(buyerSellerTransaction: "buyer"),
                     ],
                   )
                 : Padding(

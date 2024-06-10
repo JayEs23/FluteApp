@@ -33,7 +33,6 @@ class _BuyerEditTransactionState extends State<BuyerEditTransaction> {
                 children: [
                   const SizedBox(height: 50),
                   backNavigation(context),
-                  // if (!editsuccessful)
                   Form(
                       key: _formkey,
                       child: Column(
