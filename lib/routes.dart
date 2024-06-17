@@ -82,9 +82,9 @@ final GoRouter gorouter = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        // return const Splash();
+        return const Splash();
 
-        return const Home();
+        // return const Home();
         // return const TransactionHomeScreen();
         // return const Profile();
         // return const ManageBankAccount();
@@ -376,7 +376,8 @@ final GoRouter gorouter = GoRouter(
         GoRoute(
           path: 'signup',
           builder: (BuildContext context, GoRouterState state) {
-            return const SignUp();
+            // return const SignUp();
+            return const EnterEmailToVerify();
           },
         ),
         GoRoute(
